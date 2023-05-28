@@ -36,9 +36,17 @@ SIV-ROS-Submissions
 
 #### How to Submit
 
-Create a **fork** of this repository. This fork is where you will add all the solutions of your assignments. After creating your fork, and making some changes (your solutions), create a pull request with the title: ```Submission of <Name>, <Roll No.>```
+Create a **fork** of this repository. This fork is where you will add all the solutions of your assignments. After creating your fork, and making some changes (your solutions), create a pull request with the title: ```Submission of <Name>, <Roll No.>```. This pull request should be created only once, 
 
 Here ```src``` is the _source_ folder of your workspace. Also, create the ```README.md``` containing a brief description of what you have done.
 
 ### Assignment-1
+
+**Aim:** Understanding nodes, topics, and their connection with sensors.
+
+**Task:**
+Create a package - “Image_processes” that can subscribe and publish topics from given nodes:
+1. Node1 -: Publish webcam image frames to the topic “Webcam_img”. (“Webcam_img” topic takes image frames from webcam as data).
+2. Node2 -: It will subscribe to the topic “Webcam_img” and publish data to the topic “Webcam_cropped”. (“Webcam_cropped” topic has image frames from webcam and crop  it by 30% in pixels).
+3. Node3 -: It will subscribe to the topic “Webcam_cropped” and show it.
 
