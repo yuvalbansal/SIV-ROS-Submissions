@@ -3,7 +3,7 @@
 
 Submission repository for assignments of SIV-ROS project of Robotics Club 2023-24.
 
-### Objective
+## Objective
 
 - Introduce and familiarise mentees with ROS, Gazebo and Rviz
 - Integrate the following in ROS:
@@ -40,7 +40,7 @@ Create a **fork** of this repository. This fork is where you will add all the so
 
 Here ```src``` is the _source_ folder of your workspace. Also, create the ```README.md``` containing a brief description of what you have done.
 
-### Assignment-1
+## Assignment-1
 
 **Aim:** Understanding nodes, topics, and their connection with sensors.
 
