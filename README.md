@@ -50,3 +50,4 @@ Create a package - “Image_processes” that can subscribe and publish topics f
 2. Node2 -: It will subscribe to the topic “Webcam_img” and publish data to the topic “Webcam_cropped”. (“Webcam_cropped” topic has image frames from webcam and crop  it by 30% in pixels).
 3. Node3 -: It will subscribe to the topic “Webcam_cropped” and show it.
 
+**Edit:** Create a launch file named ```image_cropping.launch``` which launches all the nodes at once.
