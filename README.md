@@ -1,53 +1,7 @@
-# SIV-ROS Submissions
-**Sensor Integration and Visualisation in ROS**
-
-Submission repository for assignments of SIV-ROS project of Robotics Club 2023-24.
-
-## Objective
-
-- Introduce and familiarise mentees with ROS, Gazebo and Rviz
-- Integrate the following in ROS:
-  - Motor Encoders for Odometry data
-  - LiDAR for SLAM (RPLiDAR A1M8 360 Degree)
-  - IMU (MPU6050)
-  - GPS (NEO-M8N GPS Module)
-- **Simultaneously** take input from the sensors and visualise all the data in Rviz.
-- Use teleop through ssh or use another kind of remote control along with gmapping node to use SLAM for creating the map of an environment in Rviz.
-
-### Folder Structure
-
-```bash
-
-SIV-ROS-Submissions
-├── Assignment-1
-│   ├── 210353_DivyaGupta
-│   │   ├── README.md
-│   │   └── src
-│   ├── 210369_EmaadAhmed
-│   │   ├── README.md
-│   │   └── src
-│   └── 210684_OmShivamVerma
-│       ├── README.md
-│       └── src
-├── LICENSE
-└── README.md
-
-```
-
-#### How to Submit
-
-Create a **fork** of this repository. This fork is where you will add all the solutions of your assignments. After creating your fork, and making some changes (your solutions), create a pull request with the title: ```Submission of <Name>, <Roll No.>```. This pull request should be created only once, 
-
-Here ```src``` is the _source_ folder of your workspace. Also, create the ```README.md``` containing a brief description of what you have done.
-
-## Assignment-1
-
-**Aim:** Understanding nodes, topics, and their connection with sensors.
-
-**Task:**
-Create a package - “Image_processes” that can subscribe and publish topics from given nodes:
-1. Node1 -: Publish webcam image frames to the topic “Webcam_img”. (“Webcam_img” topic takes image frames from webcam as data).
-2. Node2 -: It will subscribe to the topic “Webcam_img” and publish data to the topic “Webcam_cropped”. (“Webcam_cropped” topic has image frames from webcam and crop  it by 30% in pixels).
-3. Node3 -: It will subscribe to the topic “Webcam_cropped” and show it.
-
-**Edit:** Create a launch file named ```image_cropping.launch``` which launches all the nodes at once.
+# ROS_Arduino
+Following are the codes to write in terminal of linux. We need to write these only after closing the serial monitor after uploading the code to arduino. Arduino IDE is supposed to be kept open. 
+Start the ROS Master - roscore
+Run rosserial client on the machine - rosrun rosserial_python serial_node.py /dev/tty<USB# or ACM#>
+The serial port is determined at run time for either ttyUSB or ttyACM. The exact port number can be found from the Arduino IDE or using dmesg | grep tty.
+Read published data returning if the button is pressed on the Arduino board or not - rostopic echo button_press.After this start rotating the motor to get the data on the terminal.
+If you want to publish data from terminal to arduino folow the link https://maker.pro/arduino/tutorial/how-to-use-arduino-with-robot-operating-system-ros
